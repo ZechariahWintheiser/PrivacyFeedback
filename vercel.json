@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "name": "privacy-feedback-system",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "contracts/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "scripts/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "artifacts/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "cache/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/contracts/(.*)",
+      "dest": "/contracts/$1"
+    },
+    {
+      "src": "/scripts/(.*)",
+      "dest": "/scripts/$1"
+    },
+    {
+      "src": "/artifacts/(.*)",
+      "dest": "/artifacts/$1"
+    },
+    {
+      "src": "/cache/(.*)",
+      "dest": "/cache/$1"
+    },
+    {
+      "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|mp4|webm|avi|mov))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*\\.(css|js|json))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
