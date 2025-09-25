@@ -1,0 +1,38 @@
+{
+  "name": "privacy-feedback-system",
+  "version": "1.0.0",
+  "description": "Privacy Customer Feedback System with Confidential Analysis using Zama FHE",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:simple": "npx hardhat run scripts/deploy-simple.js --network sepolia",
+    "deploy:local": "npx hardhat run scripts/deploy-simple.js --network localhost",
+    "test": "npx hardhat test",
+    "verify": "npx hardhat verify --network sepolia",
+    "node": "npx hardhat node",
+    "console": "npx hardhat console --network sepolia"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "solidity",
+    "privacy",
+    "feedback",
+    "fhe",
+    "zama",
+    "confidential",
+    "analysis"
+  ],
+  "author": "Privacy Feedback Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@fhevm/solidity": "^0.7.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.0"
+  }
+}
